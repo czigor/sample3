@@ -1,0 +1,9 @@
+All three samples are taken from gulyakor.hu, a hobby project of mine related to relay trail running.
+
+Runners use their mobile phones to demonstrate they have touched the checkpoints. They can do that by reading a QR code at the checkpoint or using the phone's gps capabilities to submit their coordinates. 
+
+The implementation of this happened using the same pattern as commerce_payment uses for payment methods. The "PiliskorRead" Plugin handles the verifying logic (e.g. checking the phone gps coordinates against the checkpoint's) and there's a PluginForm to display a GPS button to press.
+
+There's also an "Always successful" plugin for testing purposes.  
+
+One difference from payment method plugins is that PiliskorRead plugins must also define a route to send the checkpoint information to.
